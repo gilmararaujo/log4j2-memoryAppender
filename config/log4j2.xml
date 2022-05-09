@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="com.example.log4j2" monitorInterval="10">
+    <Appenders>
+        <MemoryAppender name="MemoryAppender" />
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <RollingFile name="LogToRollingFile" fileName="logs/app.log"
+                     filePattern="logs/%d{yyyy-MM-dd_HH}/app.%i.log.zip">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="LogToRollingFile"/>
+            <AppenderRef ref="MemoryAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
