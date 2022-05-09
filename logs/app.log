@@ -1,2 +1,4 @@
-2022-04-29 11:53:26,021 INFO c.e.l.Main [main] This is info
-2022-04-29 11:53:26,044 ERROR c.e.l.Main [main] This is error
+2022-05-09 10:27:47,505 INFO c.e.l.Main [main] This is info
+2022-05-09 10:27:47,536 ERROR c.e.l.Main [main] This is error
+2022-05-09 10:29:13,759 INFO c.e.l.Main [main] This is info
+2022-05-09 10:29:13,764 ERROR c.e.l.Main [main] This is error
