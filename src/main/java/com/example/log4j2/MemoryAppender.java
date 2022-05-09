@@ -20,6 +20,6 @@ public class MemoryAppender extends AbstractAppender {
     }
     public void append(LogEvent event) {
         // TODO Auto-generated method stub
-        System.out.println("logback loading test appenders");
+        System.out.println("logback loading test appender");
     }
 }
